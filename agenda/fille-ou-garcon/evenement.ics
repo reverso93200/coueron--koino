@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ville de Couëron//Agenda//FR
+BEGIN:VEVENT
+UID:evenement-93@localhost
+DTSTAMP:20261111T151746Z
+DTSTART:20270116T160000Z
+DTEND:20270116T180000Z
+SUMMARY:Fille ou garçon ?
+LOCATION:Théâtre Boris-Vian\, 1 bis rue Jean-Rostand\, 44220 Couëron
+URL:http://localhost:8080/agenda/fille-ou-garcon/
+END:VEVENT
+END:VCALENDAR

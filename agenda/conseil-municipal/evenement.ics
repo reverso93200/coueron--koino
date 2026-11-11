@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Ville de Couëron//Agenda//FR
+BEGIN:VEVENT
+UID:evenement-92@localhost
+DTSTAMP:20261111T151746Z
+DTSTART:20261207T170000Z
+DTEND:20261207T190000Z
+SUMMARY:Conseil municipal
+LOCATION:Hôtel de ville\, 8 place Charles-de-Gaulle\, 44220 Couëron
+URL:http://localhost:8080/agenda/conseil-municipal/
+END:VEVENT
+END:VCALENDAR
