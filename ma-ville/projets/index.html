@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Les projets de la ville – Ville de Couëron (démo)</title>
+<meta name="description" content="Démonstration du nouveau site de la Ville de Couëron, réalisée par Koino.">
+<link rel="icon" href="https://reverso93200.github.io/coueron--koino/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="https://reverso93200.github.io/coueron--koino/assets/atkinson-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://reverso93200.github.io/coueron--koino/assets/montserrat-800.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:400;font-display:swap;src:url(https://reverso93200.github.io/coueron--koino/assets/atkinson-400.woff2) format('woff2')}@font-face{font-family:'Atkinson Hyperlegible';font-style:normal;font-weight:700;font-display:swap;src:url(https://reverso93200.github.io/coueron--koino/assets/atkinson-700.woff2) format('woff2')}@font-face{font-family:'Montserrat';font-style:normal;font-weight:600;font-display:swap;src:url(https://reverso93200.github.io/coueron--koino/assets/montserrat-600.woff2) format('woff2')}@font-face{font-family:'Montserrat';font-style:normal;font-weight:700;font-display:swap;src:url(https://reverso93200.github.io/coueron--koino/assets/montserrat-700.woff2) format('woff2')}@font-face{font-family:'Montserrat';font-style:normal;font-weight:800;font-display:swap;src:url(https://reverso93200.github.io/coueron--koino/assets/montserrat-800.woff2) format('woff2')}.demo-koino{position:relative;z-index:60;background:#1F2A2C;color:#fff;font:600 15px/1.45 'Atkinson Hyperlegible','Segoe UI',system-ui,sans-serif;text-align:center;padding:10px 16px}.demo-koino a{color:#fff;text-decoration:underline;text-underline-offset:2px}.demo-koino strong{color:#F8B133}.demo-message{margin:12px 0 0;padding:12px 16px;border-radius:6px;background:#E6F4F2;color:#1F2A2C;border-left:4px solid #00786F;font:15px/1.5 'Atkinson Hyperlegible',system-ui,sans-serif}</style>
+<style>
+body{margin:0}
+a{color:#1C4B6E}a:hover{color:#143A56}
+:focus-visible{outline:3px solid #F8B133;outline-offset:2px}
+.nav-burger{display:none}
+@media (max-width:1199px){.nav-desk{display:none}.nav-burger{display:inline-flex}}
+@media (max-width:560px){.lbl-wide{display:none}.hide-sm{display:none !important}}
+</style>
+</head>
+<body>
+<div class="demo-koino" role="region" aria-label="Site de démonstration"><strong>Démonstration</strong> du nouveau site, réalisée par Koino pour la Ville de Couëron : les formulaires n'envoient rien. Ce n'est pas le site officiel de la mairie : <a href="https://www.ville-coueron.fr/" rel="noopener">ville-coueron.fr</a>.</div>
+<div id="dc-root"><div style="width: 100%; background: #F3F5F4; color: #12201D; font-family: 'Atkinson Hyperlegible', 'Segoe UI', system-ui, sans-serif; font-size: 16px; line-height: 1.5">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #D5DDDA">
+<div style="max-width: 1280px; margin: 0 auto; padding: 10px 24px; box-sizing: border-box; display: flex; flex-wrap: nowrap; gap: 20px; align-items: center">
+<a href="https://reverso93200.github.io/coueron--koino/" style="flex: 0 0 auto; display: flex">
+<img src="https://reverso93200.github.io/coueron--koino/img/logo-coueron.svg" alt="Ville de Couëron, retour à l'accueil" style="display: block; width: 94px; height: 68px">
+</a>
+<nav class="nav-desk" aria-label="Menu principal" style="flex: 1 1 auto; min-width: 0">
+<ul style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 8px; list-style: none; margin: 0; padding: 0; white-space: nowrap">
+<li><a href="https://reverso93200.github.io/coueron--koino/ma-ville/projets/" aria-current="page" style="display: inline-flex; padding: 14px 16px; color: #1F2A2C; text-decoration: none; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 3px solid #E84E1B">Ma ville</a></li>
+<li><a href="https://reverso93200.github.io/coueron--koino/menu/" style="display: inline-flex; padding: 14px 16px; color: #1F2A2C; text-decoration: none; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 3px solid transparent">Démarches et services</a></li>
+<li><a href="https://reverso93200.github.io/coueron--koino/vivre-et-sortir/" style="display: inline-flex; padding: 14px 16px; color: #1F2A2C; text-decoration: none; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 3px solid transparent">Vivre et sortir</a></li>
+</ul>
+</nav>
+<div style="flex: 0 0 auto; display: flex; align-items: center; gap: 8px; margin-left: auto">
+<button type="button" aria-label="Rechercher" style="width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid #1F2A2C; border-radius: 50%; background: #FFFFFF; color: #1F2A2C; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5L21 21"></path></svg></button>
+<button type="button" class="hide-sm" aria-label="Réglages d'affichage et d'accessibilité" style="width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid #1F2A2C; border-radius: 50%; background: #FFFFFF; color: #1F2A2C; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.5"></circle><path d="M5 8h14"></path><path d="M12 8v5"></path><path d="M9 21l3-8 3 8"></path></svg></button>
+<a aria-label="Mon espace" href="https://reverso93200.github.io/coueron--koino/mon-espace/" style="display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 20px; border-radius: 6px; background: #00786F; color: #FFFFFF; text-decoration: none; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 15px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg><span class="lbl-wide">Mon espace</span></a>
+<a href="https://reverso93200.github.io/coueron--koino/menu/" class="nav-burger" style="align-items: center; gap: 8px; min-height: 46px; padding: 0 18px; border-radius: 6px; background: #1F2A2C; color: #FFFFFF; text-decoration: none; font-weight: 700">Menu</a>
+</div>
+</div>
+</header>
+<main id="contenu">
+
+<section style="position: relative; overflow: hidden; background: #1C4B6E">
+<img src="https://reverso93200.github.io/coueron--koino/img/vue-bourg.webp" alt="Le bourg de Couëron vu de la Loire" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<div style="position: relative; max-width: 1280px; min-height: 360px; margin: 0 auto; padding: 120px 24px 32px; box-sizing: border-box; display: flex; align-items: flex-end">
+<div style="flex: 0 1 640px; min-width: 0; background: #FFFFFF; border-radius: 8px; padding: clamp(20px, 3vw, 32px); box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
+<nav aria-label="Fil d'Ariane" style="font-size: 14px; color: #4A5A56"><a href="https://reverso93200.github.io/coueron--koino/" style="color: #4A5A56">Accueil</a> › <a href="#" style="color: #4A5A56">Ma ville</a> › Projets</nav>
+<h1 style="margin: 0; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: clamp(32px, 2vw + 18px, 46px); line-height: 1.04; font-weight: 700; letter-spacing: -0.02em">Les projets de la ville</h1>
+<p style="margin: 0; font-size: 17px; color: #3E4F4B">Calendrier, budget, documents et état d'avancement de chaque projet.</p>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 40px 24px 72px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px">
+<div style="flex: 1 1 180px; min-width: 0; padding: 16px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #D5DDDA; display: flex; flex-direction: column"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 32px; font-weight: 700; color: #1C4B6E; font-variant-numeric: tabular-nums">2</span><span style="color: #4A5A56">en cours</span></div>
+<div style="flex: 1 1 180px; min-width: 0; padding: 16px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #D5DDDA; display: flex; flex-direction: column"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 32px; font-weight: 700; color: #6B4300; font-variant-numeric: tabular-nums">1</span><span style="color: #4A5A56">à l'étude</span></div>
+<div style="flex: 1 1 180px; min-width: 0; padding: 16px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #D5DDDA; display: flex; flex-direction: column"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 32px; font-weight: 700; color: #4B3A78; font-variant-numeric: tabular-nums">1</span><span style="color: #4A5A56">en concertation</span></div>
+<div style="flex: 1 1 180px; min-width: 0; padding: 16px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #D5DDDA; display: flex; flex-direction: column"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 32px; font-weight: 700; color: #165C43; font-variant-numeric: tabular-nums">2</span><span style="color: #4A5A56">terminés</span></div>
+</div>
+
+<div role="group" aria-label="Filtrer par état d'avancement" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+<span style="font-weight: 700; margin-right: 4px">Afficher</span>
+
+<button type="button" aria-pressed="true" style="min-height: 44px; padding: 0 16px; border-radius: 6px; border: 1px solid #12201D; background: #12201D; color: #FFFFFF; font: inherit; font-weight: 700; cursor: pointer">Tous les projets</button>
+
+<button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border-radius: 6px; border: 1px solid #B9C5C1; background: #FFFFFF; color: #12201D; font: inherit; font-weight: 700; cursor: pointer">En cours</button>
+
+<button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border-radius: 6px; border: 1px solid #B9C5C1; background: #FFFFFF; color: #12201D; font: inherit; font-weight: 700; cursor: pointer">À l'étude</button>
+
+<button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border-radius: 6px; border: 1px solid #B9C5C1; background: #FFFFFF; color: #12201D; font: inherit; font-weight: 700; cursor: pointer">Concertation</button>
+
+<button type="button" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border-radius: 6px; border: 1px solid #B9C5C1; background: #FFFFFF; color: #12201D; font: inherit; font-weight: 700; cursor: pointer">Terminés</button>
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+
+<article style="display: flex; flex-wrap: wrap; background: #FFFFFF; border: 1px solid #D5DDDA; border-radius: 8px; overflow: hidden">
+
+<img loading="lazy" decoding="async" src="https://reverso93200.github.io/coueron--koino/img/participation.webp" alt="Habitants réunis autour d'un tableau d'idées" style="flex: 1 1 280px; min-width: 0; max-width: 100%; width: 100%; height: 240px; object-fit: cover; display: block">
+
+
+<div style="flex: 999 1 520px; min-width: 0; padding: 24px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center"><span style="padding: 2px 10px; border-radius: 4px; background: #E3EDF5; color: #1C4B6E; font-size: 13px; font-weight: 700">En cours</span><span style="font-size: 14px; color: #4A5A56">Participation</span></div>
+<h2 style="margin: 0; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 26px; line-height: 1.15; font-weight: 700">Quatre conseils de quartier</h2>
+<p style="margin: 0; color: #3E4F4B">Le Bourg, la Chabossière, les Marais et les Villages ont chacun leur conseil de quartier et leur adjoint de quartier. Les candidatures d'habitants ont été reçues jusqu'au 19 octobre.</p>
+<dl style="margin: 4px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px 20px; font-size: 15px">
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Calendrier</dt><dd style="margin: 0; font-weight: 700">Créés le 9 avril 2026 · installation à partir du 23 novembre</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Budget</dt><dd style="margin: 0; font-weight: 700">Sans coût direct</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Où</dt><dd style="margin: 0; font-weight: 700">Les 4 quartiers</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Document</dt><dd style="margin: 0"><a href="#" style="font-weight: 700">Délibérations 2026-048 à 050</a></dd></div>
+</dl>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; font-size: 13px; margin-top: 4px">
+
+<span style="border-top: 6px solid #1C4B6E; padding-top: 5px; color: #4A5A56; font-weight: 400">Création</span>
+
+<span style="border-top: 6px solid #1C4B6E; padding-top: 5px; color: #1C4B6E; font-weight: 700">Sélection</span>
+
+<span style="border-top: 6px solid #D5DDDA; padding-top: 5px; color: #4A5A56; font-weight: 400">Installation</span>
+
+</div>
+</div>
+</article>
+
+<article style="display: flex; flex-wrap: wrap; background: #FFFFFF; border: 1px solid #D5DDDA; border-radius: 8px; overflow: hidden">
+
+<img loading="lazy" decoding="async" src="https://reverso93200.github.io/coueron--koino/img/tour-plomb.webp" alt="La Tour à plomb vue du ciel" style="flex: 1 1 280px; min-width: 0; max-width: 100%; width: 100%; height: 240px; object-fit: cover; display: block">
+
+
+<div style="flex: 999 1 520px; min-width: 0; padding: 24px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center"><span style="padding: 2px 10px; border-radius: 4px; background: #E3EDF5; color: #1C4B6E; font-size: 13px; font-weight: 700">En cours</span><span style="font-size: 14px; color: #4A5A56">Patrimoine</span></div>
+<h2 style="margin: 0; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 26px; line-height: 1.15; font-weight: 700">Restauration de la Tour à plomb</h2>
+<p style="margin: 0; color: #3E4F4B">Diagnostics réalisés, maîtrise d'œuvre confiée au groupement Antak, lauréate du loto du patrimoine 2026 : seul projet retenu en Loire-Atlantique.</p>
+<dl style="margin: 4px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px 20px; font-size: 15px">
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Calendrier</dt><dd style="margin: 0; font-weight: 700">Échafaudage fin 2026 · 18 mois de travaux</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Budget</dt><dd style="margin: 0; font-weight: 700">4,8 M€ (programme 2024-2)</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Où</dt><dd style="margin: 0; font-weight: 700">Quartier du Bourg</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Document</dt><dd style="margin: 0"><a href="#" style="font-weight: 700">Budget 2026 du 9 février 2026</a></dd></div>
+</dl>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; font-size: 13px; margin-top: 4px">
+
+<span style="border-top: 6px solid #1C4B6E; padding-top: 5px; color: #4A5A56; font-weight: 400">Diagnostics</span>
+
+<span style="border-top: 6px solid #1C4B6E; padding-top: 5px; color: #1C4B6E; font-weight: 700">Préparation</span>
+
+<span style="border-top: 6px solid #D5DDDA; padding-top: 5px; color: #4A5A56; font-weight: 400">Travaux</span>
+
+</div>
+</div>
+</article>
+
+<article style="display: flex; flex-wrap: wrap; background: #FFFFFF; border: 1px solid #D5DDDA; border-radius: 8px; overflow: hidden">
+
+<img loading="lazy" decoding="async" src="https://reverso93200.github.io/coueron--koino/img/port.webp" alt="Le port de Couëron et son feu" style="flex: 1 1 280px; min-width: 0; max-width: 100%; width: 100%; height: 240px; object-fit: cover; display: block">
+
+
+<div style="flex: 999 1 520px; min-width: 0; padding: 24px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center"><span style="padding: 2px 10px; border-radius: 4px; background: #DCF2E8; color: #165C43; font-size: 13px; font-weight: 700">Terminé</span><span style="font-size: 14px; color: #4A5A56">Voirie · Nantes Métropole</span></div>
+<h2 style="margin: 0; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 26px; line-height: 1.15; font-weight: 700">Sécurisation de 35 passages piétons</h2>
+<p style="margin: 0; color: #3E4F4B">Nantes Métropole a dégagé la visibilité aux abords de 35 passages piétons de la commune, comme le prévoit la loi d'orientation des mobilités.</p>
+<dl style="margin: 4px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px 20px; font-size: 15px">
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Calendrier</dt><dd style="margin: 0; font-weight: 700">Août 2026</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Budget</dt><dd style="margin: 0; font-weight: 700">Nantes Métropole</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Où</dt><dd style="margin: 0; font-weight: 700">35 passages piétons</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Document</dt><dd style="margin: 0"><a href="#" style="font-weight: 700">Article du 20 juillet 2026</a></dd></div>
+</dl>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; font-size: 13px; margin-top: 4px">
+
+<span style="border-top: 6px solid #2E7D6B; padding-top: 5px; color: #4A5A56; font-weight: 400">Étude</span>
+
+<span style="border-top: 6px solid #2E7D6B; padding-top: 5px; color: #4A5A56; font-weight: 400">Travaux</span>
+
+<span style="border-top: 6px solid #2E7D6B; padding-top: 5px; color: #165C43; font-weight: 700">Livré</span>
+
+</div>
+</div>
+</article>
+
+<article style="display: flex; flex-wrap: wrap; background: #FFFFFF; border: 1px solid #D5DDDA; border-radius: 8px; overflow: hidden">
+
+<img loading="lazy" decoding="async" src="https://reverso93200.github.io/coueron--koino/img/vignes.webp" alt="Vignes à l'automne" style="flex: 1 1 280px; min-width: 0; max-width: 100%; width: 100%; height: 240px; object-fit: cover; display: block">
+
+
+<div style="flex: 999 1 520px; min-width: 0; padding: 24px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center"><span style="padding: 2px 10px; border-radius: 4px; background: #FCEFD2; color: #6B4300; font-size: 13px; font-weight: 700">À l'étude</span><span style="font-size: 14px; color: #4A5A56">Cadre de vie</span></div>
+<h2 style="margin: 0; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 26px; line-height: 1.15; font-weight: 700">Aménagement foncier agricole</h2>
+<p style="margin: 0; color: #3E4F4B">Réorganisation des parcelles agricoles, avec une étude d'impact environnemental. La commission communale est en cours de renouvellement.</p>
+<dl style="margin: 4px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px 20px; font-size: 15px">
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Calendrier</dt><dd style="margin: 0; font-weight: 700">Après le renouvellement de la commission</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Budget</dt><dd style="margin: 0; font-weight: 700">Non chiffré</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Où</dt><dd style="margin: 0; font-weight: 700">Les Villages</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Document</dt><dd style="margin: 0"><a href="#" style="font-weight: 700">Appel à candidatures</a></dd></div>
+</dl>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; font-size: 13px; margin-top: 4px">
+
+<span style="border-top: 6px solid #C99A2E; padding-top: 5px; color: #6B4300; font-weight: 700">Étude</span>
+
+<span style="border-top: 6px solid #D5DDDA; padding-top: 5px; color: #4A5A56; font-weight: 400">Enquête</span>
+
+<span style="border-top: 6px solid #D5DDDA; padding-top: 5px; color: #4A5A56; font-weight: 400">Travaux</span>
+
+</div>
+</div>
+</article>
+
+<article style="display: flex; flex-wrap: wrap; background: #FFFFFF; border: 1px solid #D5DDDA; border-radius: 8px; overflow: hidden">
+
+<img loading="lazy" decoding="async" src="https://reverso93200.github.io/coueron--koino/img/maison-loire.webp" alt="La Maison dans la Loire" style="flex: 1 1 280px; min-width: 0; max-width: 100%; width: 100%; height: 240px; object-fit: cover; display: block">
+
+
+<div style="flex: 999 1 520px; min-width: 0; padding: 24px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center"><span style="padding: 2px 10px; border-radius: 4px; background: #ECE6F5; color: #4B3A78; font-size: 13px; font-weight: 700">Concertation</span><span style="font-size: 14px; color: #4A5A56">Vie de la commune</span></div>
+<h2 style="margin: 0; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 26px; line-height: 1.15; font-weight: 700">Nouvelle identité visuelle de la ville</h2>
+<p style="margin: 0; color: #3E4F4B">Les habitants choisissent les symboles qui représentent le mieux Couëron. Les résultats serviront à créer le nouveau logo.</p>
+<dl style="margin: 4px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px 20px; font-size: 15px">
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Calendrier</dt><dd style="margin: 0; font-weight: 700">Sondage du 16 au 31 octobre 2026</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Budget</dt><dd style="margin: 0; font-weight: 700">Non chiffré</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Où</dt><dd style="margin: 0; font-weight: 700">Toute la ville</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Document</dt><dd style="margin: 0"><a href="#" style="font-weight: 700">Répondre au sondage</a></dd></div>
+</dl>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; font-size: 13px; margin-top: 4px">
+
+<span style="border-top: 6px solid #6E5AA6; padding-top: 5px; color: #4B3A78; font-weight: 700">Sondage</span>
+
+<span style="border-top: 6px solid #D5DDDA; padding-top: 5px; color: #4A5A56; font-weight: 400">Création</span>
+
+<span style="border-top: 6px solid #D5DDDA; padding-top: 5px; color: #4A5A56; font-weight: 400">Déploiement</span>
+
+</div>
+</div>
+</article>
+
+<article style="display: flex; flex-wrap: wrap; background: #FFFFFF; border: 1px solid #D5DDDA; border-radius: 8px; overflow: hidden">
+
+
+<div style="flex: 1 1 280px; min-width: 0; height: 240px; background: #1D5B4D; color: #BFE6D6; display: flex; align-items: center; justify-content: center"><svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14l3-8h12l3 8z"></path><path d="M12 6v8"></path><path d="M4.5 10h15"></path><path d="M8 14v6"></path><path d="M16 14v6"></path><circle cx="19" cy="3" r="1.5"></circle></svg></div>
+
+<div style="flex: 999 1 520px; min-width: 0; padding: 24px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center"><span style="padding: 2px 10px; border-radius: 4px; background: #DCF2E8; color: #165C43; font-size: 13px; font-weight: 700">Terminé</span><span style="font-size: 14px; color: #4A5A56">Énergie</span></div>
+<h2 style="margin: 0; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 26px; line-height: 1.15; font-weight: 700">Ombrières solaires du complexe sportif René-Gaudin</h2>
+<p style="margin: 0; color: #3E4F4B">516 panneaux photovoltaïques couvrent le parking du complexe et produisent environ 271 MWh par an. Ils sont exploités pendant 30 ans par EnR44 et SeeYouSun.</p>
+<dl style="margin: 4px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px 20px; font-size: 15px">
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Calendrier</dt><dd style="margin: 0; font-weight: 700">Inaugurées le 24 septembre 2026</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Budget</dt><dd style="margin: 0; font-weight: 700">Investissement porté par EnR44 et SeeYouSun</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Où</dt><dd style="margin: 0; font-weight: 700">Complexe René-Gaudin</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Document</dt><dd style="margin: 0"><a href="#" style="font-weight: 700">Article du 24 septembre 2026</a></dd></div>
+</dl>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; font-size: 13px; margin-top: 4px">
+
+<span style="border-top: 6px solid #2E7D6B; padding-top: 5px; color: #4A5A56; font-weight: 400">Étude</span>
+
+<span style="border-top: 6px solid #2E7D6B; padding-top: 5px; color: #4A5A56; font-weight: 400">Travaux</span>
+
+<span style="border-top: 6px solid #2E7D6B; padding-top: 5px; color: #165C43; font-weight: 700">Livré</span>
+
+</div>
+</div>
+</article>
+
+</div>
+
+<p style="margin: 8px 0 0; font-size: 14px; color: #4A5A56">Informations tenues à jour par les services de la ville. Dernière mise à jour : 20 octobre 2026. Une question sur un projet ? <a href="https://reverso93200.github.io/coueron--koino/contact/">Écrire au service concerné</a></p>
+</section>
+
+</main>
+<footer style="position: relative; overflow: hidden; background: linear-gradient(to bottom, transparent 60px, #FFFFFF 60px); color: #1F2A2C; font-size: 17px; line-height: 1.55">
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 60px; height: 260px; background: #00786F"></div>
+<div aria-hidden="true" style="position: absolute; left: 3%; top: 20px; width: 190px; height: 300px; background: #E84E1B; clip-path: polygon(0 0, 38% 0, 100% 50%, 38% 100%, 0 100%, 62% 50%)"></div>
+<div aria-hidden="true" style="position: absolute; right: 4%; top: 30px; width: 150px; height: 230px; background: #F8B133; clip-path: polygon(100% 0, 62% 0, 0 50%, 62% 100%, 100% 100%, 38% 50%)"></div>
+<div style="position: relative; max-width: 1080px; margin: 0 auto; padding: 100px 24px 0; box-sizing: border-box">
+<div style="padding: clamp(24px, 3vw, 40px); border-radius: 8px; background: #FFFFFF; box-shadow: 0 4px 14px rgba(31, 42, 44, 0.12); display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start">
+<img loading="lazy" decoding="async" src="https://reverso93200.github.io/coueron--koino/img/logo-coueron.svg" alt="Ville de Couëron" style="display: block; width: 118px; height: 85px">
+<div style="display: flex; gap: 8px">
+<a href="https://fr-fr.facebook.com/VilledeCoueron" aria-label="Facebook" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #1F2A2C; display: inline-flex; align-items: center; justify-content: center; color: #1F2A2C" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"></path></svg></a>
+<a href="https://www.instagram.com/villecoueron" aria-label="Instagram" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #1F2A2C; display: inline-flex; align-items: center; justify-content: center; color: #1F2A2C" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg></a>
+<a href="https://www.youtube.com/user/villecoueron/featured" aria-label="YouTube" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #1F2A2C; display: inline-flex; align-items: center; justify-content: center; color: #1F2A2C" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9l5 3-5 3z"></path></svg></a>
+<a href="https://fr.linkedin.com/organization-guest/company/villedecou%C3%ABron" aria-label="LinkedIn" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #1F2A2C; display: inline-flex; align-items: center; justify-content: center; color: #1F2A2C" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 10v7"></path><path d="M12 17v-7"></path><path d="M12 13a3 3 0 0 1 6 0v4"></path></svg></a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<a href="https://reverso93200.github.io/coueron--koino/contact/" style="display: inline-flex; align-items: center; gap: 12px; min-height: 46px; padding: 0 20px 0 6px; border-radius: 6px; border: 2px solid #1F2A2C; color: #1F2A2C; text-decoration: none; font-weight: 700"><span style="width: 34px; height: 34px; border-radius: 50%; background: #1F2A2C; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></span>02 40 38 51 00</a>
+<a href="https://reverso93200.github.io/coueron--koino/contact/" style="display: inline-flex; align-items: center; gap: 12px; min-height: 46px; padding: 0 20px 0 6px; border-radius: 6px; border: 2px solid #1F2A2C; color: #1F2A2C; text-decoration: none; font-weight: 700"><span style="width: 34px; height: 34px; border-radius: 50%; background: #1F2A2C; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>Horaires des services</a>
+<a href="https://reverso93200.github.io/coueron--koino/contact/" style="display: inline-flex; align-items: center; gap: 12px; min-height: 46px; padding: 0 20px 0 6px; border-radius: 6px; border: 2px solid #1F2A2C; color: #1F2A2C; text-decoration: none; font-weight: 700"><span style="width: 34px; height: 34px; border-radius: 50%; background: #1F2A2C; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span>Nous écrire</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 200px">
+<span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 800">Adresse</span>
+<span aria-hidden="true" style="width: 32px; height: 3px; background: #E84E1B"></span>
+<span>Hôtel de ville<br>8 place Charles-de-Gaulle<br>44220 Couëron</span>
+</div>
+</div>
+</div>
+<div style="position: relative; max-width: 1080px; margin: 0 auto; padding: 48px 24px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 28px; font-size: 15px">
+<nav aria-label="Ma ville" style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 14px">Ma ville</span><a href="https://reverso93200.github.io/coueron--koino/ma-ville/elus/" style="color: #3F4B49">Vos élus</a><a href="https://reverso93200.github.io/coueron--koino/ma-ville/projets/" style="color: #3F4B49">Projets de la ville</a><a href="https://reverso93200.github.io/coueron--koino/ma-ville/vos-questions/" style="color: #3F4B49">Vos questions</a><a href="https://reverso93200.github.io/coueron--koino/ma-ville/expression-des-groupes/" style="color: #3F4B49">Expression des groupes</a><a href="https://reverso93200.github.io/coueron--koino/ma-ville/conseil-municipal/" style="color: #3F4B49">Délibérations et budget</a><a href="https://reverso93200.github.io/coueron--koino/ma-ville/chiffres/" style="color: #3F4B49">Couëron en chiffres</a></nav>
+<nav aria-label="Démarches" style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 14px">Démarches</span><a href="https://reverso93200.github.io/coueron--koino/mon-espace/" style="color: #3F4B49">Espace citoyen</a><a href="https://reverso93200.github.io/coueron--koino/demarches/carte-identite-passeport/" style="color: #3F4B49">Papiers d'identité</a><a href="https://reverso93200.github.io/coueron--koino/demarches/ecole-cantine-loisirs/" style="color: #3F4B49">Portail famille</a><a href="https://reverso93200.github.io/coueron--koino/demarches/" style="color: #3F4B49">France Services</a></nav>
+<nav aria-label="Vivre et sortir" style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 14px">Vivre et sortir</span><a href="https://reverso93200.github.io/coueron--koino/vous-emmenagez/" style="color: #3F4B49">J'emménage</a><a href="https://reverso93200.github.io/coueron--koino/ma-ville/quartiers/bourg/" style="color: #3F4B49">Mon quartier</a><a href="https://reverso93200.github.io/coueron--koino/vous-emmenagez/" style="color: #3F4B49">Qui fait quoi : Ville ou Métropole</a><a href="https://reverso93200.github.io/coueron--koino/vivre-et-sortir/agenda/" style="color: #3F4B49">Agenda</a></nav>
+<form style="display: flex; flex-direction: column; gap: 8px"><label for="newsletter" style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 14px">Newsletter</label><input id="newsletter" type="email" placeholder="prenom.nom@exemple.fr" style="min-height: 44px; padding: 0 16px; border: 2px solid #1F2A2C; border-radius: 6px; font: inherit; font-size: 15px; color: #1F2A2C; background: #FFFFFF"><button type="submit" style="min-height: 44px; border: 0; border-radius: 6px; background: #1F2A2C; color: #FFFFFF; font: inherit; font-weight: 700; cursor: pointer">S'inscrire</button></form>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: center; padding-top: 20px; border-top: 1px solid #E4E7E5; font-size: 14px; color: #4A5653">
+<a href="https://reverso93200.github.io/coueron--koino/accessibilite/" style="color: #4A5653">Déclaration d'accessibilité</a><a href="https://reverso93200.github.io/coueron--koino/plan-du-site/" style="color: #4A5653">Plan du site</a><a href="https://reverso93200.github.io/coueron--koino/mentions-legales/" style="color: #4A5653">Mentions légales</a><a href="https://reverso93200.github.io/coueron--koino/donnees-personnelles/" style="color: #4A5653">Données personnelles</a><a href="https://reverso93200.github.io/coueron--koino/espace-presse/" style="color: #4A5653">Espace presse</a><span>Maquette Koino · octobre 2026</span>
+</div>
+</div>
+</footer>
+
+</div></div>
+<script type="text/x-template" id="dc-tpl-ordi"><div style="width: 100%; background: #F3F5F4; color: #12201D; font-family: 'Atkinson Hyperlegible', 'Segoe UI', system-ui, sans-serif; font-size: 16px; line-height: 1.5">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #D5DDDA">
+<div style="max-width: 1280px; margin: 0 auto; padding: 10px 24px; box-sizing: border-box; display: flex; flex-wrap: nowrap; gap: 20px; align-items: center">
+<a href="https://reverso93200.github.io/coueron--koino/" style="flex: 0 0 auto; display: flex">
+<img src="https://reverso93200.github.io/coueron--koino/img/logo-coueron.svg" alt="Ville de Couëron, retour à l'accueil" style="display: block; width: 94px; height: 68px">
+</a>
+<nav class="nav-desk" aria-label="Menu principal" style="flex: 1 1 auto; min-width: 0">
+<ul style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 8px; list-style: none; margin: 0; padding: 0; white-space: nowrap">
+<li><a href="https://reverso93200.github.io/coueron--koino/ma-ville/projets/" aria-current="page" style="display: inline-flex; padding: 14px 16px; color: #1F2A2C; text-decoration: none; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 3px solid #E84E1B">Ma ville</a></li>
+<li><a href="https://reverso93200.github.io/coueron--koino/menu/" style="display: inline-flex; padding: 14px 16px; color: #1F2A2C; text-decoration: none; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 3px solid transparent">Démarches et services</a></li>
+<li><a href="https://reverso93200.github.io/coueron--koino/vivre-et-sortir/" style="display: inline-flex; padding: 14px 16px; color: #1F2A2C; text-decoration: none; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; border-bottom: 3px solid transparent">Vivre et sortir</a></li>
+</ul>
+</nav>
+<div style="flex: 0 0 auto; display: flex; align-items: center; gap: 8px; margin-left: auto">
+<button type="button" aria-label="Rechercher" style="width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid #1F2A2C; border-radius: 50%; background: #FFFFFF; color: #1F2A2C; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5L21 21"></path></svg></button>
+<button type="button" class="hide-sm" aria-label="Réglages d'affichage et d'accessibilité" style="width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center; border: 2px solid #1F2A2C; border-radius: 50%; background: #FFFFFF; color: #1F2A2C; cursor: pointer"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4.5" r="1.5"></circle><path d="M5 8h14"></path><path d="M12 8v5"></path><path d="M9 21l3-8 3 8"></path></svg></button>
+<a aria-label="Mon espace" href="https://reverso93200.github.io/coueron--koino/mon-espace/" style="display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 20px; border-radius: 6px; background: #00786F; color: #FFFFFF; text-decoration: none; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 15px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg><span class="lbl-wide">Mon espace</span></a>
+<a href="https://reverso93200.github.io/coueron--koino/menu/" class="nav-burger" style="align-items: center; gap: 8px; min-height: 46px; padding: 0 18px; border-radius: 6px; background: #1F2A2C; color: #FFFFFF; text-decoration: none; font-weight: 700">Menu</a>
+</div>
+</div>
+</header>
+<main id="contenu">
+
+<section style="position: relative; overflow: hidden; background: #1C4B6E">
+<img src="https://reverso93200.github.io/coueron--koino/img/vue-bourg.webp" alt="Le bourg de Couëron vu de la Loire" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<div style="position: relative; max-width: 1280px; min-height: 360px; margin: 0 auto; padding: 120px 24px 32px; box-sizing: border-box; display: flex; align-items: flex-end">
+<div style="flex: 0 1 640px; min-width: 0; background: #FFFFFF; border-radius: 8px; padding: clamp(20px, 3vw, 32px); box-sizing: border-box; display: flex; flex-direction: column; gap: 10px">
+<nav aria-label="Fil d'Ariane" style="font-size: 14px; color: #4A5A56"><a href="https://reverso93200.github.io/coueron--koino/" style="color: #4A5A56">Accueil</a> › <a href="#" style="color: #4A5A56">Ma ville</a> › Projets</nav>
+<h1 style="margin: 0; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: clamp(32px, 2vw + 18px, 46px); line-height: 1.04; font-weight: 700; letter-spacing: -0.02em">Les projets de la ville</h1>
+<p style="margin: 0; font-size: 17px; color: #3E4F4B">Calendrier, budget, documents et état d'avancement de chaque projet.</p>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 40px 24px 72px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px">
+<div style="flex: 1 1 180px; min-width: 0; padding: 16px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #D5DDDA; display: flex; flex-direction: column"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 32px; font-weight: 700; color: #1C4B6E; font-variant-numeric: tabular-nums">{{counts.cours}}</span><span style="color: #4A5A56">en cours</span></div>
+<div style="flex: 1 1 180px; min-width: 0; padding: 16px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #D5DDDA; display: flex; flex-direction: column"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 32px; font-weight: 700; color: #6B4300; font-variant-numeric: tabular-nums">{{counts.etude}}</span><span style="color: #4A5A56">à l'étude</span></div>
+<div style="flex: 1 1 180px; min-width: 0; padding: 16px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #D5DDDA; display: flex; flex-direction: column"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 32px; font-weight: 700; color: #4B3A78; font-variant-numeric: tabular-nums">{{counts.concert}}</span><span style="color: #4A5A56">en concertation</span></div>
+<div style="flex: 1 1 180px; min-width: 0; padding: 16px 18px; border-radius: 6px; background: #FFFFFF; border: 1px solid #D5DDDA; display: flex; flex-direction: column"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 32px; font-weight: 700; color: #165C43; font-variant-numeric: tabular-nums">{{counts.fini}}</span><span style="color: #4A5A56">terminés</span></div>
+</div>
+
+<div role="group" aria-label="Filtrer par état d'avancement" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+<span style="font-weight: 700; margin-right: 4px">Afficher</span>
+<sc-for list="{{filters}}" as="f" hint-placeholder-count="5">
+<button type="button" onClick="{{f.pick}}" aria-pressed="{{f.pressed}}" style="min-height: 44px; padding: 0 16px; border-radius: 6px; border: {{f.border}}; background: {{f.bg}}; color: {{f.fg}}; font: inherit; font-weight: 700; cursor: pointer">{{f.label}}</button>
+</sc-for>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+<sc-for list="{{shown}}" as="p" hint-placeholder-count="4">
+<article style="display: flex; flex-wrap: wrap; background: #FFFFFF; border: 1px solid #D5DDDA; border-radius: 8px; overflow: hidden">
+<sc-if value="{{p.hasImg}}" hint-placeholder-val="{{true}}">
+<img loading="lazy" decoding="async" src="{{p.img}}" alt="{{p.alt}}" style="flex: 1 1 280px; min-width: 0; max-width: 100%; width: 100%; height: 240px; object-fit: cover; display: block">
+</sc-if>
+<sc-if value="{{p.noImg}}" hint-placeholder-val="{{false}}">
+<div style="flex: 1 1 280px; min-width: 0; height: 240px; background: #1D5B4D; color: #BFE6D6; display: flex; align-items: center; justify-content: center"><svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14l3-8h12l3 8z"></path><path d="M12 6v8"></path><path d="M4.5 10h15"></path><path d="M8 14v6"></path><path d="M16 14v6"></path><circle cx="19" cy="3" r="1.5"></circle></svg></div>
+</sc-if>
+<div style="flex: 999 1 520px; min-width: 0; padding: 24px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center"><span style="padding: 2px 10px; border-radius: 4px; background: {{p.chipBg}}; color: {{p.chipFg}}; font-size: 13px; font-weight: 700">{{p.statut}}</span><span style="font-size: 14px; color: #4A5A56">{{p.theme}}</span></div>
+<h2 style="margin: 0; font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-size: 26px; line-height: 1.15; font-weight: 700">{{p.titre}}</h2>
+<p style="margin: 0; color: #3E4F4B">{{p.desc}}</p>
+<dl style="margin: 4px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px 20px; font-size: 15px">
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Calendrier</dt><dd style="margin: 0; font-weight: 700">{{p.quand}}</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Budget</dt><dd style="margin: 0; font-weight: 700">{{p.budget}}</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Où</dt><dd style="margin: 0; font-weight: 700">{{p.ou}}</dd></div>
+<div style="display: flex; flex-direction: column"><dt style="color: #4A5A56; font-size: 14px">Document</dt><dd style="margin: 0"><a href="#" style="font-weight: 700">{{p.doc}}</a></dd></div>
+</dl>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; font-size: 13px; margin-top: 4px">
+<sc-for list="{{p.steps}}" as="s" hint-placeholder-count="3">
+<span style="border-top: 6px solid {{s.bar}}; padding-top: 5px; color: {{s.fg}}; font-weight: {{s.weight}}">{{s.label}}</span>
+</sc-for>
+</div>
+</div>
+</article>
+</sc-for>
+</div>
+
+<p style="margin: 8px 0 0; font-size: 14px; color: #4A5A56">Informations tenues à jour par les services de la ville. Dernière mise à jour : 20 octobre 2026. Une question sur un projet ? <a href="https://reverso93200.github.io/coueron--koino/contact/">Écrire au service concerné</a></p>
+</section>
+
+</main>
+<footer style="position: relative; overflow: hidden; background: linear-gradient(to bottom, transparent 60px, #FFFFFF 60px); color: #1F2A2C; font-size: 17px; line-height: 1.55">
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 60px; height: 260px; background: #00786F"></div>
+<div aria-hidden="true" style="position: absolute; left: 3%; top: 20px; width: 190px; height: 300px; background: #E84E1B; clip-path: polygon(0 0, 38% 0, 100% 50%, 38% 100%, 0 100%, 62% 50%)"></div>
+<div aria-hidden="true" style="position: absolute; right: 4%; top: 30px; width: 150px; height: 230px; background: #F8B133; clip-path: polygon(100% 0, 62% 0, 0 50%, 62% 100%, 100% 100%, 38% 50%)"></div>
+<div style="position: relative; max-width: 1080px; margin: 0 auto; padding: 100px 24px 0; box-sizing: border-box">
+<div style="padding: clamp(24px, 3vw, 40px); border-radius: 8px; background: #FFFFFF; box-shadow: 0 4px 14px rgba(31, 42, 44, 0.12); display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 14px; align-items: flex-start">
+<img loading="lazy" decoding="async" src="https://reverso93200.github.io/coueron--koino/img/logo-coueron.svg" alt="Ville de Couëron" style="display: block; width: 118px; height: 85px">
+<div style="display: flex; gap: 8px">
+<a href="https://fr-fr.facebook.com/VilledeCoueron" aria-label="Facebook" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #1F2A2C; display: inline-flex; align-items: center; justify-content: center; color: #1F2A2C" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"></path></svg></a>
+<a href="https://www.instagram.com/villecoueron" aria-label="Instagram" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #1F2A2C; display: inline-flex; align-items: center; justify-content: center; color: #1F2A2C" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle></svg></a>
+<a href="https://www.youtube.com/user/villecoueron/featured" aria-label="YouTube" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #1F2A2C; display: inline-flex; align-items: center; justify-content: center; color: #1F2A2C" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9l5 3-5 3z"></path></svg></a>
+<a href="https://fr.linkedin.com/organization-guest/company/villedecou%C3%ABron" aria-label="LinkedIn" style="width: 40px; height: 40px; border-radius: 50%; border: 2px solid #1F2A2C; display: inline-flex; align-items: center; justify-content: center; color: #1F2A2C" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 10v7"></path><path d="M12 17v-7"></path><path d="M12 13a3 3 0 0 1 6 0v4"></path></svg></a>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<a href="https://reverso93200.github.io/coueron--koino/contact/" style="display: inline-flex; align-items: center; gap: 12px; min-height: 46px; padding: 0 20px 0 6px; border-radius: 6px; border: 2px solid #1F2A2C; color: #1F2A2C; text-decoration: none; font-weight: 700"><span style="width: 34px; height: 34px; border-radius: 50%; background: #1F2A2C; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"></path></svg></span>02 40 38 51 00</a>
+<a href="https://reverso93200.github.io/coueron--koino/contact/" style="display: inline-flex; align-items: center; gap: 12px; min-height: 46px; padding: 0 20px 0 6px; border-radius: 6px; border: 2px solid #1F2A2C; color: #1F2A2C; text-decoration: none; font-weight: 700"><span style="width: 34px; height: 34px; border-radius: 50%; background: #1F2A2C; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>Horaires des services</a>
+<a href="https://reverso93200.github.io/coueron--koino/contact/" style="display: inline-flex; align-items: center; gap: 12px; min-height: 46px; padding: 0 20px 0 6px; border-radius: 6px; border: 2px solid #1F2A2C; color: #1F2A2C; text-decoration: none; font-weight: 700"><span style="width: 34px; height: 34px; border-radius: 50%; background: #1F2A2C; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg></span>Nous écrire</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 200px">
+<span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 800">Adresse</span>
+<span aria-hidden="true" style="width: 32px; height: 3px; background: #E84E1B"></span>
+<span>Hôtel de ville<br>8 place Charles-de-Gaulle<br>44220 Couëron</span>
+</div>
+</div>
+</div>
+<div style="position: relative; max-width: 1080px; margin: 0 auto; padding: 48px 24px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 28px; font-size: 15px">
+<nav aria-label="Ma ville" style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 14px">Ma ville</span><a href="https://reverso93200.github.io/coueron--koino/ma-ville/elus/" style="color: #3F4B49">Vos élus</a><a href="https://reverso93200.github.io/coueron--koino/ma-ville/projets/" style="color: #3F4B49">Projets de la ville</a><a href="https://reverso93200.github.io/coueron--koino/ma-ville/vos-questions/" style="color: #3F4B49">Vos questions</a><a href="https://reverso93200.github.io/coueron--koino/ma-ville/expression-des-groupes/" style="color: #3F4B49">Expression des groupes</a><a href="https://reverso93200.github.io/coueron--koino/ma-ville/conseil-municipal/" style="color: #3F4B49">Délibérations et budget</a><a href="https://reverso93200.github.io/coueron--koino/ma-ville/chiffres/" style="color: #3F4B49">Couëron en chiffres</a></nav>
+<nav aria-label="Démarches" style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 14px">Démarches</span><a href="https://reverso93200.github.io/coueron--koino/mon-espace/" style="color: #3F4B49">Espace citoyen</a><a href="https://reverso93200.github.io/coueron--koino/demarches/carte-identite-passeport/" style="color: #3F4B49">Papiers d'identité</a><a href="https://reverso93200.github.io/coueron--koino/demarches/ecole-cantine-loisirs/" style="color: #3F4B49">Portail famille</a><a href="https://reverso93200.github.io/coueron--koino/demarches/" style="color: #3F4B49">France Services</a></nav>
+<nav aria-label="Vivre et sortir" style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 14px">Vivre et sortir</span><a href="https://reverso93200.github.io/coueron--koino/vous-emmenagez/" style="color: #3F4B49">J'emménage</a><a href="https://reverso93200.github.io/coueron--koino/ma-ville/quartiers/bourg/" style="color: #3F4B49">Mon quartier</a><a href="https://reverso93200.github.io/coueron--koino/vous-emmenagez/" style="color: #3F4B49">Qui fait quoi : Ville ou Métropole</a><a href="https://reverso93200.github.io/coueron--koino/vivre-et-sortir/agenda/" style="color: #3F4B49">Agenda</a></nav>
+<form style="display: flex; flex-direction: column; gap: 8px"><label for="newsletter" style="font-family: 'Montserrat', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 14px">Newsletter</label><input id="newsletter" type="email" placeholder="prenom.nom@exemple.fr" style="min-height: 44px; padding: 0 16px; border: 2px solid #1F2A2C; border-radius: 6px; font: inherit; font-size: 15px; color: #1F2A2C; background: #FFFFFF"><button type="submit" style="min-height: 44px; border: 0; border-radius: 6px; background: #1F2A2C; color: #FFFFFF; font: inherit; font-weight: 700; cursor: pointer">S'inscrire</button></form>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: center; padding-top: 20px; border-top: 1px solid #E4E7E5; font-size: 14px; color: #4A5653">
+<a href="https://reverso93200.github.io/coueron--koino/accessibilite/" style="color: #4A5653">Déclaration d'accessibilité</a><a href="https://reverso93200.github.io/coueron--koino/plan-du-site/" style="color: #4A5653">Plan du site</a><a href="https://reverso93200.github.io/coueron--koino/mentions-legales/" style="color: #4A5653">Mentions légales</a><a href="https://reverso93200.github.io/coueron--koino/donnees-personnelles/" style="color: #4A5653">Données personnelles</a><a href="https://reverso93200.github.io/coueron--koino/espace-presse/" style="color: #4A5653">Espace presse</a><span>Maquette Koino · octobre 2026</span>
+</div>
+</div>
+</footer>
+
+</div></script>
+<script type="text/x-dc" id="dc-js-ordi">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { filtre: 'tous' };
+  }
+  renderVals() {
+    const filtre = (this.state && this.state.filtre) || 'tous';
+    const style = {
+      fini: { label: 'Terminé', bg: '#DCF2E8', fg: '#165C43', bar: '#2E7D6B' },
+      cours: { label: 'En cours', bg: '#E3EDF5', fg: '#1C4B6E', bar: '#1C4B6E' },
+      etude: { label: "À l'étude", bg: '#FCEFD2', fg: '#6B4300', bar: '#C99A2E' },
+      concert: { label: 'Concertation', bg: '#ECE6F5', fg: '#4B3A78', bar: '#6E5AA6' }
+    };
+    const data = [
+      { k: 'cours', titre: 'Quatre conseils de quartier', theme: 'Participation', desc: "Le Bourg, la Chabossière, les Marais et les Villages ont chacun leur conseil de quartier et leur adjoint de quartier. Les candidatures d'habitants ont été reçues jusqu'au 19 octobre.", quand: 'Créés le 9 avril 2026 · installation à partir du 23 novembre', budget: 'Sans coût direct', ou: 'Les 4 quartiers', doc: 'Délibérations 2026-048 à 050', img: 'https://reverso93200.github.io/coueron--koino/img/participation.webp', alt: "Habitants réunis autour d'un tableau d'idées", steps: ['Création', 'Sélection', 'Installation'], at: 1 },
+      { k: 'cours', titre: 'Restauration de la Tour à plomb', theme: 'Patrimoine', desc: "Diagnostics réalisés, maîtrise d'œuvre confiée au groupement Antak, lauréate du loto du patrimoine 2026 : seul projet retenu en Loire-Atlantique.", quand: 'Échafaudage fin 2026 · 18 mois de travaux', budget: '4,8 M€ (programme 2024-2)', ou: 'Quartier du Bourg', doc: 'Budget 2026 du 9 février 2026', img: 'https://reverso93200.github.io/coueron--koino/img/tour-plomb.webp', alt: 'La Tour à plomb vue du ciel', steps: ['Diagnostics', 'Préparation', 'Travaux'], at: 1 },
+      { k: 'fini', titre: 'Sécurisation de 35 passages piétons', theme: 'Voirie · Nantes Métropole', desc: "Nantes Métropole a dégagé la visibilité aux abords de 35 passages piétons de la commune, comme le prévoit la loi d'orientation des mobilités.", quand: 'Août 2026', budget: 'Nantes Métropole', ou: '35 passages piétons', doc: 'Article du 20 juillet 2026', img: 'https://reverso93200.github.io/coueron--koino/img/port.webp', alt: 'Le port de Couëron et son feu', steps: ['Étude', 'Travaux', 'Livré'], at: 2 },
+      { k: 'etude', titre: 'Aménagement foncier agricole', theme: 'Cadre de vie', desc: "Réorganisation des parcelles agricoles, avec une étude d'impact environnemental. La commission communale est en cours de renouvellement.", quand: 'Après le renouvellement de la commission', budget: 'Non chiffré', ou: 'Les Villages', doc: 'Appel à candidatures', img: 'https://reverso93200.github.io/coueron--koino/img/vignes.webp', alt: "Vignes à l'automne", steps: ['Étude', 'Enquête', 'Travaux'], at: 0 },
+      { k: 'concert', titre: 'Nouvelle identité visuelle de la ville', theme: 'Vie de la commune', desc: 'Les habitants choisissent les symboles qui représentent le mieux Couëron. Les résultats serviront à créer le nouveau logo.', quand: 'Sondage du 16 au 31 octobre 2026', budget: 'Non chiffré', ou: 'Toute la ville', doc: 'Répondre au sondage', img: 'https://reverso93200.github.io/coueron--koino/img/maison-loire.webp', alt: 'La Maison dans la Loire', steps: ['Sondage', 'Création', 'Déploiement'], at: 0 },
+      { k: 'fini', titre: 'Ombrières solaires du complexe sportif René-Gaudin', theme: 'Énergie', desc: '516 panneaux photovoltaïques couvrent le parking du complexe et produisent environ 271 MWh par an. Ils sont exploités pendant 30 ans par EnR44 et SeeYouSun.', quand: 'Inaugurées le 24 septembre 2026', budget: 'Investissement porté par EnR44 et SeeYouSun', ou: 'Complexe René-Gaudin', doc: 'Article du 24 septembre 2026', img: '', alt: '', steps: ['Étude', 'Travaux', 'Livré'], at: 2 }
+    ];
+    const counts = { cours: 0, etude: 0, concert: 0, fini: 0 };
+    data.forEach((d) => { counts[d.k] += 1; });
+    const opts = [['tous', 'Tous les projets'], ['cours', 'En cours'], ['etude', "À l'étude"], ['concert', 'Concertation'], ['fini', 'Terminés']];
+    return {
+      counts,
+      filters: opts.map(([id, label]) => ({
+        label,
+        pressed: filtre === id ? 'true' : 'false',
+        bg: filtre === id ? '#12201D' : '#FFFFFF',
+        fg: filtre === id ? '#FFFFFF' : '#12201D',
+        border: filtre === id ? '1px solid #12201D' : '1px solid #B9C5C1',
+        pick: () => this.setState({ filtre: id })
+      })),
+      shown: data.filter((d) => filtre === 'tous' || d.k === filtre).map((d) => {
+        const st = style[d.k];
+        return {
+          ...d,
+          statut: st.label,
+          chipBg: st.bg,
+          chipFg: st.fg,
+          hasImg: !!d.img,
+          noImg: !d.img,
+          steps: d.steps.map((label, i) => ({
+            label,
+            bar: i <= d.at ? st.bar : '#D5DDDA',
+            fg: i === d.at ? st.fg : '#4A5A56',
+            weight: i === d.at ? '700' : '400'
+          }))
+        };
+      })
+    };
+  }
+}
+</script>
+<script>window.DC_BASE="https://reverso93200.github.io/coueron--koino";window.DC_PAGES={"Main": "https://reverso93200.github.io/coueron--koino/", "Mobile": "https://reverso93200.github.io/coueron--koino/", "Menu": "https://reverso93200.github.io/coueron--koino/menu/", "MobileMenu": "https://reverso93200.github.io/coueron--koino/menu/", "Recherche": "https://reverso93200.github.io/coueron--koino/recherche/", "Affichage": "https://reverso93200.github.io/coueron--koino/reglages-affichage/", "Projets": "https://reverso93200.github.io/coueron--koino/ma-ville/projets/", "ProjetFiche": "https://reverso93200.github.io/coueron--koino/ma-ville/projets/tour-a-plomb/", "ProjetFicheMobile": "https://reverso93200.github.io/coueron--koino/ma-ville/projets/tour-a-plomb/", "Elus": "https://reverso93200.github.io/coueron--koino/ma-ville/elus/", "Quartiers": "https://reverso93200.github.io/coueron--koino/ma-ville/quartiers/", "Quartier": "https://reverso93200.github.io/coueron--koino/ma-ville/quartiers/bourg/", "Questions": "https://reverso93200.github.io/coueron--koino/ma-ville/vos-questions/", "Expression": "https://reverso93200.github.io/coueron--koino/ma-ville/expression-des-groupes/", "Conseil": "https://reverso93200.github.io/coueron--koino/ma-ville/conseil-municipal/", "Budget": "https://reverso93200.github.io/coueron--koino/ma-ville/budget/", "Chiffres": "https://reverso93200.github.io/coueron--koino/ma-ville/chiffres/", "Magazine": "https://reverso93200.github.io/coueron--koino/ma-ville/magazine/", "Travaux": "https://reverso93200.github.io/coueron--koino/ma-ville/travaux/", "EcrireMaire": "https://reverso93200.github.io/coueron--koino/ma-ville/ecrire-au-maire/", "Jeunes": "https://reverso93200.github.io/coueron--koino/ma-ville/conseils-enfants-jeunes/", "Demarches": "https://reverso93200.github.io/coueron--koino/demarches/", "Demarche": "https://reverso93200.github.io/coueron--koino/demarches/carte-identite-passeport/", "DemarcheMobile": "https://reverso93200.github.io/coueron--koino/demarches/carte-identite-passeport/", "Famille": "https://reverso93200.github.io/coueron--koino/demarches/ecole-cantine-loisirs/", "Dechets": "https://reverso93200.github.io/coueron--koino/demarches/dechets/", "Signaler": "https://reverso93200.github.io/coueron--koino/demarches/signaler/", "Salles": "https://reverso93200.github.io/coueron--koino/demarches/salles-municipales/", "Emmenager": "https://reverso93200.github.io/coueron--koino/vous-emmenagez/", "Naissance": "https://reverso93200.github.io/coueron--koino/vous-attendez-un-enfant/", "Entreprise": "https://reverso93200.github.io/coueron--koino/vous-creez-votre-entreprise/", "Seniors": "https://reverso93200.github.io/coueron--koino/vous-avez-plus-de-60-ans/", "MonEspace": "https://reverso93200.github.io/coueron--koino/mon-espace/", "VivreSortir": "https://reverso93200.github.io/coueron--koino/vivre-et-sortir/", "Agenda": "https://reverso93200.github.io/coueron--koino/vivre-et-sortir/agenda/", "Evenement": "https://reverso93200.github.io/coueron--koino/vivre-et-sortir/agenda/forum-sante-et-bien-etre/", "Associations": "https://reverso93200.github.io/coueron--koino/vivre-et-sortir/associations/", "Mediatheque": "https://reverso93200.github.io/coueron--koino/vivre-et-sortir/mediatheque-victor-jara/", "Piscine": "https://reverso93200.github.io/coueron--koino/vivre-et-sortir/piscine-baptiste-lefevre/", "Theatre": "https://reverso93200.github.io/coueron--koino/vivre-et-sortir/theatre-boris-vian/", "Patrimoine": "https://reverso93200.github.io/coueron--koino/vivre-et-sortir/patrimoine/tour-a-plomb/", "Commerces": "https://reverso93200.github.io/coueron--koino/vivre-et-sortir/commerces-et-marches/", "ProduitsLocaux": "https://reverso93200.github.io/coueron--koino/vivre-et-sortir/produits-locaux/", "Nature": "https://reverso93200.github.io/coueron--koino/vivre-et-sortir/nature-et-animaux/", "Tourisme": "https://reverso93200.github.io/coueron--koino/vivre-et-sortir/tourisme-et-jumelages/", "Tranquillite": "https://reverso93200.github.io/coueron--koino/tranquillite-publique/", "Journal": "https://reverso93200.github.io/coueron--koino/journal/", "JournalMobile": "https://reverso93200.github.io/coueron--koino/journal/", "Article": "https://reverso93200.github.io/coueron--koino/journal/tour-a-plomb-loto-du-patrimoine/", "ArticleMobile": "https://reverso93200.github.io/coueron--koino/journal/tour-a-plomb-loto-du-patrimoine/", "Sondage": "https://reverso93200.github.io/coueron--koino/journal/nouvelle-identite-concertation/", "Contact": "https://reverso93200.github.io/coueron--koino/contact/", "PlanDuSite": "https://reverso93200.github.io/coueron--koino/plan-du-site/", "Accessibilite": "https://reverso93200.github.io/coueron--koino/accessibilite/", "MentionsLegales": "https://reverso93200.github.io/coueron--koino/mentions-legales/", "DonneesPersonnelles": "https://reverso93200.github.io/coueron--koino/donnees-personnelles/", "EspacePresse": "https://reverso93200.github.io/coueron--koino/espace-presse/", "Erreur404": "https://reverso93200.github.io/coueron--koino/404.html", "Saisie": "https://reverso93200.github.io/coueron--koino/agents/espace-de-redaction/", "Administration": "https://reverso93200.github.io/coueron--koino/agents/administration/"};</script>
+<script src="https://reverso93200.github.io/coueron--koino/assets/runtime.js"></script>
+<script>
+(function(){
+  var BASE="https://reverso93200.github.io/coueron--koino";
+  document.addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=e.target;
+    var champ=f.querySelector('input[type=search],input[name=s],input[name=q]')||(/recherche|cherchez/i.test(f.innerHTML)&&f.querySelector('input:not([type=email])'));
+    if(champ){location.href=BASE+'/recherche/?q='+encodeURIComponent(champ.value||'');return;}
+    var o=f.parentNode.querySelector('.demo-message');if(o)o.remove();
+    var m=document.createElement('p');m.className='demo-message';m.setAttribute('role','status');
+    m.textContent='Démonstration : ce formulaire n’envoie rien. Sur le site de la ville, il est transmis au service concerné.';
+    f.insertAdjacentElement('afterend',m);
+  },true);
+  document.addEventListener('click',function(e){
+    var b=e.target.closest&&e.target.closest('button[aria-label]');
+    if(!b||b.closest('form'))return;
+    var l=b.getAttribute('aria-label');
+    if(/^Rechercher$/i.test(l)){location.href=BASE+'/recherche/';}
+    else if(/^Réglages d.affichage/i.test(l)){location.href=BASE+'/reglages-affichage/';}
+  });
+})();
+</script>
+</body>
+</html>
