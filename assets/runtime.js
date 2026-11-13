@@ -143,7 +143,7 @@
 	function visibleMap() { var m = {}; blocks().forEach(function (it) { m[it.path] = { vis: it.vis, txt: it.el.textContent }; }); return m; }
 	/* Les blocs sous la ligne de flottaison apparaissent en douceur au défilement (sauf si l'appareil demande moins d'animations). */
 	function reveal() {
-		if (!('IntersectionObserver' in window) || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) { return; }
+		if (!('IntersectionObserver' in window) || document.documentElement.classList.contains('aff-mouvement') || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) { return; }
 		var main = root.querySelector('main'); if (!main) { return; }
 		var blocks = [];
 		Array.prototype.forEach.call(main.children, function (el) {
