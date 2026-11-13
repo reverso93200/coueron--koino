@@ -34,13 +34,18 @@
 		if (tag === 'sc-for') {
 			var list = whole(node.getAttribute('list') || '', scope) || [], as = node.getAttribute('as') || 'item';
 			for (var i = 0; i < list.length; i++) {
-				var s = Object.create(scope); s[as] = list[i]; s.$index = i;
+				var s = Object.create(scope); s[as] = list[i]; s.$index = i; s.$path = (scope.$path || '') + '/' + i;
 				for (var c = 0; c < node.childNodes.length; c++) { build(node.childNodes[c], s, parent); }
 			}
 			return;
 		}
 		if (tag === 'sc-if') {
-			if (whole(node.getAttribute('value') || '', scope)) { for (var k = 0; k < node.childNodes.length; k++) { build(node.childNodes[k], scope, parent); } }
+			if (whole(node.getAttribute('value') || '', scope)) {
+				if (!ids.has(node)) { ids.set(node, ++nextId); }
+				var key = ids.get(node) + (scope.$path || ''), before = parent.childNodes.length;
+				for (var k = 0; k < node.childNodes.length; k++) { build(node.childNodes[k], scope, parent); }
+				for (var q = before; q < parent.childNodes.length; q++) { if (parent.childNodes[q].nodeType === 1) { parent.childNodes[q].setAttribute('data-dc-k', key); } }
+			}
 			return;
 		}
 		var el = node.namespaceURI && node.namespaceURI !== 'http://www.w3.org/1999/xhtml' ? document.createElementNS(node.namespaceURI, node.localName) : document.createElement(node.localName);
@@ -62,6 +67,7 @@
 		parent.appendChild(el);
 	}
 
+	var ids = new WeakMap(), nextId = 0, shown = {};
 	var variants = {}, current = null;
 	['ordi', 'mobile'].forEach(function (v) {
 		var tpl = document.getElementById('dc-tpl-' + v), js = document.getElementById('dc-js-' + v);
@@ -98,8 +104,59 @@
 		var kids = v.tpl.childNodes;
 		for (var i = 0; i < kids.length; i++) { build(kids[i], vals, frag); }
 		var snap = first ? null : snapshot();
+		var before = first ? null : visibleMap();
 		root.replaceChildren(frag);
 		if (snap) { restore(snap); }
+		// après un clic : ce qui vient de s'ouvrir (réponse, étape, panneau) apparaît en fondu
+		var now = {};
+		Array.prototype.forEach.call(root.querySelectorAll('[data-dc-k]'), function (el) {
+			var k = el.getAttribute('data-dc-k'); now[k] = 1;
+			if (!first && !shown[k]) { el.classList.add('dc-apparait'); }
+		});
+		shown = now;
+		// ce qui était masqué (ou absent) et devient visible après le clic : même fondu
+		if (before) {
+			var after = blocks();
+			var act = document.activeElement;
+			after.forEach(function (it) {
+				var b = before[it.path];
+				if (!it.vis || it.el.closest('.dc-apparait')) { return; }
+				if (!b || !b.vis) { it.el.classList.add('dc-apparait'); return; }
+				// contenu remplacé (onglet, filtre, étape) : le bloc qui a changé, hors bouton cliqué
+				if (b.txt !== it.el.textContent && !(act && it.el.contains(act)) && !it.el.querySelector('.dc-apparait')) { it.el.classList.add('dc-apparait'); }
+			});
+		}
+		if (first) { reveal(); }
+	}
+	var BLOCK = 'section, article, aside, form, fieldset, ul, ol, li, p, div, details, table, figure';
+	function blocks() {
+		var out = [], main = root.querySelector('main') || root;
+		(function walk(el, path) {
+			for (var i = 0; i < el.children.length; i++) {
+				var c = el.children[i], pth = path + '/' + i + c.localName;
+				if (c.matches(BLOCK)) { out.push({ el: c, path: pth, vis: c.getClientRects().length > 0 && getComputedStyle(c).visibility !== 'hidden' }); }
+				if (c.children.length && out.length < 4000) { walk(c, pth); }
+			}
+		})(main, '');
+		return out;
+	}
+	function visibleMap() { var m = {}; blocks().forEach(function (it) { m[it.path] = { vis: it.vis, txt: it.el.textContent }; }); return m; }
+	/* Les blocs sous la ligne de flottaison apparaissent en douceur au défilement (sauf si l'appareil demande moins d'animations). */
+	function reveal() {
+		if (!('IntersectionObserver' in window) || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) { return; }
+		var main = root.querySelector('main'); if (!main) { return; }
+		var blocks = [];
+		Array.prototype.forEach.call(main.children, function (el) {
+			if (el.children.length > 2 && el.offsetHeight > 400) { Array.prototype.forEach.call(el.children, function (c) { blocks.push(c); }); } else { blocks.push(el); }
+		});
+		var h = window.innerHeight;
+		var io = new IntersectionObserver(function (entries) {
+			entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('dc-visible'); io.unobserve(e.target); } });
+		}, { rootMargin: '0px 0px -40px 0px' });
+		blocks.forEach(function (el) {
+			var r = el.getBoundingClientRect();
+			if (r.top > h && r.height > 0) { el.classList.add('dc-reveal'); io.observe(el); }
+		});
 	}
 	current = choose();
 	paint(true);
