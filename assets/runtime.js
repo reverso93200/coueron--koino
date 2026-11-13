@@ -152,7 +152,7 @@
 		var h = window.innerHeight;
 		var io = new IntersectionObserver(function (entries) {
 			entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('dc-visible'); io.unobserve(e.target); } });
-		}, { rootMargin: '0px 0px -40px 0px' });
+		}, { rootMargin: '0px 0px 120px 0px' });
 		blocks.forEach(function (el) {
 			var r = el.getBoundingClientRect();
 			if (r.top > h && r.height > 0) { el.classList.add('dc-reveal'); io.observe(el); }
@@ -165,4 +165,5 @@
 		if (mq.addEventListener) { mq.addEventListener('change', onChange); } else if (mq.addListener) { mq.addListener(onChange); }
 	}
 	document.documentElement.classList.add('dc-pret');
+	root.classList.add('dc-ok');
 })();
